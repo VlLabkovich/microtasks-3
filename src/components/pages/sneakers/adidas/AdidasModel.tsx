@@ -2,11 +2,15 @@ import {useParams} from "react-router-dom";
 import {adidasArr} from "../../dataSneakers/adidas/AdidasDataSneakers";
 
 export const AdidasModel = () => {
-    const {id} = useParams<{ id: string }>()
+    const {id} = useParams<{id: string}>()
+    // or
+    // const params = useParams<{ id: string }>()
+    // const id = params.id
+
     const foundItem = adidasArr.find(el => el.id === Number(id));
-    console.log(foundItem)
+
     return (
-        <>
+        <div style={{textAlign:'center', fontSize:"30px"}}>
             <>
                 {/*{adidasArr.filter(el => el.id === Number(id)).map(el => {*/}
                 {/*    return <div key={el.id} style={{display: "flex", flexDirection: "column", alignItems: "center"}}>*/}
@@ -25,10 +29,10 @@ export const AdidasModel = () => {
                     <p>{foundItem.price}</p>
                     <img src={foundItem.picture} alt={foundItem.model} style={{width: "700px", height: "700px"}}/>
                 </div>
-            ) : (
-                <p>Модель отсутствует</p>
-            )}
+            ) :
+                <p style={{fontSize:"40px"}}>Модель отсутствует</p>
+            }
 
-        </>
+        </div>
     )
 }

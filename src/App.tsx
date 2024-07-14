@@ -42,7 +42,9 @@ function App() {
                         <Route path={PATH.PAGE4} element={<AdidasModel/>}/>
 
                         <Route path={PATH.ERROR404} element={<Error404/>}/>
-                        <Route path={"/*"} element={<Navigate to={PATH.ERROR404}/>}/>
+
+                        {/*<Route path={'/adidas/*'} element={<Error404/>}/>*/}
+                        {/*<Route path={"/*"} element={<Navigate to={PATH.ERROR404}/>}/>*/}
                     </Routes>
                 </S.Content>
             </S.Body>
