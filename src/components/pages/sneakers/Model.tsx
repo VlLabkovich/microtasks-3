@@ -1,14 +1,33 @@
 import {useParams} from "react-router-dom";
-import {adidasArr} from "../../dataSneakers/adidas/AdidasDataSneakers";
+import {adidasArr, AdidasItem} from "../dataSneakers/adidas/AdidasDataSneakers";
+import {pumaArr, PumaItem} from "../dataSneakers/puma/PumaDataSneakers";
+import {nikeArr, NikeItem} from "../dataSneakers/nike/NikeDataSneakers";
 
-export const AdidasModel = () => {
-    const {id} = useParams<{id: string}>()
-    // or
-    // const params = useParams<{ id: string }>()
+
+interface SneakersModels {
+    [key: string]: (AdidasItem[] | PumaItem[] | NikeItem[]);
+}
+
+const sneakersModels:(SneakersModels)= {
+    "adidas" : adidasArr,
+    "puma" : pumaArr,
+    "nike" : nikeArr
+};
+
+export const Model = () => {
+
+    const {brand, id} = useParams()
+
+    // const params = useParams()
     // const id = params.id
+    // const model = params.model
 
+    console.log(id)
+    console.log(brand)
 
-    const foundItem = adidasArr.find(el => el.id === Number(id));
+    // const foundItem = sneakersModels[`${model}`].find(el => el.id === Number(id))
+    // or
+    const foundItem = brand ? sneakersModels[brand].find(el => el.id === Number(id)) : null
 
     // Variation 1
     //
@@ -43,10 +62,10 @@ export const AdidasModel = () => {
             {foundItem ? (
                 <div key={foundItem.id}
                      style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                    <p style={{fontSize: "40px"}}>{foundItem.model}</p>
+                    <p style={{fontSize: "40px"}}>{foundItem.modelName}</p>
                     <p>{foundItem.collection}</p>
                     <p>{foundItem.price}</p>
-                    <img src={foundItem.picture} alt={foundItem.model}
+                    <img src={foundItem.picture} alt={foundItem.brand}
                          style={{width: "700px", height: "700px"}}/>
                 </div>
                 )

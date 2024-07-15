@@ -1,12 +1,12 @@
 import React from 'react';
-import {PumaSneakers} from "./puma/PumaSneakers";
-import {pumaArr} from "../dataSneakers/puma/PumaDataSneakers";
+import {NikeSneakers} from "./nike/NikeSneakers";
+import {nikeArr} from "../dataSneakers/nike/NikeDataSneakers";
 
-export const Puma = () => {
+export const Nike = () => {
     return (
         <div style={{textAlign: "center"}}>
-            <h2>PUMA</h2>
-            <PumaSneakers pumaArr={pumaArr}/>
+            <h2>NIKE</h2>
+            <NikeSneakers nikeArr={nikeArr} />
             <p>
                 What is Lorem Ipsum?
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the

@@ -1,12 +1,12 @@
 import React from "react";
-import {AdidasItem} from "../../dataSneakers/adidas/AdidasDataSneakers";
 import {Link} from "react-router-dom";
+import {PumaItem} from "../../dataSneakers/puma/PumaDataSneakers";
 
-type AdidasProps = {
-    adidasArr: AdidasItem[]
+type PumaProps = {
+    pumaArr: PumaItem[]
 }
 
-export const AdidasSneakers = ({adidasArr}: AdidasProps) => {
+export const PumaSneakers = ({pumaArr}: PumaProps) => {
 
     return (
         <div style={{
@@ -15,14 +15,14 @@ export const AdidasSneakers = ({adidasArr}: AdidasProps) => {
             flexWrap: "wrap",
             gap: "30px"
         }}>
-            {adidasArr.map(adidas => {
+            {pumaArr.map(puma => {
 
                 return (
                     <>
-                        <Link key={adidas.id} to={`/adidas/${adidas.id}/${adidas.brand}`}>
+                        <Link key={puma.id} to={`/puma/${puma.id}/${puma.brand}`}>
                             <img
-                                src={adidas.picture}
-                                alt={adidas.brand}
+                                src={puma.picture}
+                                alt={puma.brand}
                                 style={{width: 300, height: "auto"}}
                             />
                         </Link>

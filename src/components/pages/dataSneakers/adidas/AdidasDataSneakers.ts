@@ -9,7 +9,8 @@ import adidasModel3
 
 export type AdidasItem = {
     id: number,
-    model: string;
+    brand: string;
+    modelName: string;
     collection: string;
     price: string;
     picture: string;
@@ -18,7 +19,8 @@ export type AdidasItem = {
 export const adidasArr: AdidasItem[] = [
     {
         id: 1,
-        model: 'ADIDAS ADIFOM TRXN',
+        brand: 'adidas',
+        modelName: 'ADIDAS ADIFOM TRXN',
         collection: 'new collection1',
         price: '100200$',
         picture: adidasModel1,
@@ -26,14 +28,16 @@ export const adidasArr: AdidasItem[] = [
     },
     {
         id: 2,
-        model: 'ADIDAS ADIFOM SUPER',
+        brand: 'adidas',
+        modelName: 'ADIDAS ADIFOM SUPER',
         collection: 'new collection22',
         price: '200300$',
         picture: adidasModel2
     },
     {
         id: 3,
-        model: 'ADIDAS SUPER SUPERSKI',
+        brand: 'adidas',
+        modelName: 'ADIDAS SUPER SUPERSKI',
         collection: 'new collection333',
         price: '300400$',
         picture: adidasModel3

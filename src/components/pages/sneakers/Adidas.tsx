@@ -4,9 +4,8 @@ import {adidasArr} from "../dataSneakers/adidas/AdidasDataSneakers";
 
 export const Adidas = () => {
     return (
-        <div>
+        <div style={{textAlign: "center"}}>
             <h2>ADIDAS</h2>
-            <h3 style={{textAlign: "center"}}>MODELS</h3>
             <AdidasSneakers adidasArr={adidasArr} />
             <p>
                 What is Lorem Ipsum?
