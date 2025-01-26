@@ -18,15 +18,13 @@ export const NikeSneakers = ({nikeArr}: NikeProps) => {
             {nikeArr.map(nike => {
 
                 return (
-                    <>
-                        <Link key={nike.id} to={`/nike/${nike.id}/${nike.brand}`}>
-                            <img
-                                src={nike.picture}
-                                alt={nike.brand}
-                                style={{width: 300, height: "auto"}}
-                            />
-                        </Link>
-                    </>
+                    <Link key={nike.id} to={`/nike/${nike.id}/${nike.brand}`}>
+                        <img
+                            src={nike.picture}
+                            alt={nike.brand}
+                            style={{width: 300, height: "auto"}}
+                        />
+                    </Link>
                 )
             })}
         </div>

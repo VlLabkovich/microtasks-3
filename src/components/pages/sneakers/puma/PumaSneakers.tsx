@@ -18,15 +18,13 @@ export const PumaSneakers = ({pumaArr}: PumaProps) => {
             {pumaArr.map(puma => {
 
                 return (
-                    <>
-                        <Link key={puma.id} to={`/puma/${puma.id}/${puma.brand}`}>
-                            <img
-                                src={puma.picture}
-                                alt={puma.brand}
-                                style={{width: 300, height: "auto"}}
-                            />
-                        </Link>
-                    </>
+                    <Link key={puma.id} to={`/puma/${puma.id}/${puma.brand}`}>
+                        <img
+                            src={puma.picture}
+                            alt={puma.brand}
+                            style={{width: 300, height: "auto"}}
+                        />
+                    </Link>
                 )
             })}
         </div>

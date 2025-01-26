@@ -18,15 +18,13 @@ export const AdidasSneakers = ({adidasArr}: AdidasProps) => {
             {adidasArr.map(adidas => {
 
                 return (
-                    <>
-                        <Link key={adidas.id} to={`/adidas/${adidas.id}/${adidas.brand}`}>
-                            <img
-                                src={adidas.picture}
-                                alt={adidas.brand}
-                                style={{width: 300, height: "auto"}}
-                            />
-                        </Link>
-                    </>
+                    <Link key={adidas.id} to={`/adidas/${adidas.id}/${adidas.brand}`}>
+                        <img
+                            src={adidas.picture}
+                            alt={adidas.brand}
+                            style={{width: 300, height: "auto"}}
+                        />
+                    </Link>
                 )
             })}
         </div>
