@@ -33,8 +33,8 @@ export const Prices = (props: Props) => {
             onSale: false
         },
         {
-            manufacturer: "Abibas",
-            name: "Abibas Alphabounce",
+            manufacturer: "Nike",
+            name: "Nike Alphabounce",
             price: 60,
             onSale: true
         }

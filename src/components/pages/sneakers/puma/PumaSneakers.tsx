@@ -18,7 +18,7 @@ export const PumaSneakers = ({pumaArr}: PumaProps) => {
             {pumaArr.map(puma => {
 
                 return (
-                    <Link key={puma.id} to={`/puma/${puma.id}/${puma.brand}`}>
+                    <Link key={puma.id} to={`/puma/${puma.id}`}>
                         <img
                             src={puma.picture}
                             alt={puma.brand}

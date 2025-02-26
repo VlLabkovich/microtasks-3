@@ -18,7 +18,7 @@ export const AdidasSneakers = ({adidasArr}: AdidasProps) => {
             {adidasArr.map(adidas => {
 
                 return (
-                    <Link key={adidas.id} to={`/adidas/${adidas.id}/${adidas.brand}`}>
+                    <Link key={adidas.id} to={`/adidas/${adidas.id}`}>
                         <img
                             src={adidas.picture}
                             alt={adidas.brand}

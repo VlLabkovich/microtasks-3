@@ -9,9 +9,9 @@ interface SneakersModels {
 }
 
 const sneakersModels:(SneakersModels)= {
-    "adidas" : adidasArr,
-    "puma" : pumaArr,
-    "nike" : nikeArr
+    'adidas' : adidasArr,
+    'puma' : pumaArr,
+    'nike' : nikeArr
 };
 
 export const Model = () => {
